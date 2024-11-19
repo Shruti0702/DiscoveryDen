@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiscoveryDen LoginPage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-control">
+            <h1 style="font-family:'Tangerine'; text-align: center; font-size:50px; color: white; font-size: 80px;">DiscoveryDen</h1>
+        </div>
+        <h2>Login</h2>
+        <form action="/index.html" method="POST" id="loginForm">
+            <div class="form-control">
+                <input name="contact_info" type="text" required>
+                <label>Email or phone number</label>
+            </div>
+            <div class="form-control">
+                <input name="password" type="password" required>
+                <label>Password</label>
+            </div>
+            <button type="submit">Log In</button>
+            <div class="form-help"> 
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <a href="#">Need help?</a>
+            </div>
+        </form>
+        <p>New to DiscoveryDen? <a href="signup.html">Sign up now</a></p>
+        <a href="#">Learn more.</a>
+    </div>
+    <script src="client.js" type="module"></script>
+</body>
+</html>

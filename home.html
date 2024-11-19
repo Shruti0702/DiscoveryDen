@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    let isOpenCVRunning = false;   
+    const myDiv = document.getElementById('virtual_paint');
+    if (myDiv) {
+        myDiv.addEventListener('click', function runOpenCV() {
+            if (!isOpenCVRunning) {
+                isOpenCVRunning = true;
+                fetch('/runopencv')
+                    .then(response => response.text())
+                    .then(data => {
+                        console.log(data);
+                        alert('OpenCV executed successfully!');
+                        isOpenCVRunning = false;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error executing OpenCV.');
+                        isOpenCVRunning = false;
+                        });
+                }   else {
+                console.log('OpenCV is already running.');
+                }
+                });
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userName = localStorage.getItem('userName');
+            if (userName) {
+                const heading = document.querySelector('h1');
+                heading.textContent = `Welcome, ${userName} to DiscoveryDen!`;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="description">
+         <h1 style="font-family:'Tangerine'; text-decoration:underline;text-align:center;font-size:50px; color: whitesmoke; font-size: 50px; ">About us</h1>
+         <div class="description-border">
+            <p>At DiscoveryDen, we believe in nurturing young minds through a vibrant community of learning, 
+                exploration, and growth. Our platform is designed for parents and guardians who want the best 
+                for their children. With a focus on holistic development, we offer a range of educational resources, 
+                activities, and support tailored to foster creativity, critical thinking, and social skills.At DiscoveryDen, 
+                we believe in nurturing young minds through a vibrant community of learning, 
+                exploration, and growth. Our platform is designed for parents and guardians who want the best 
+                for their children. With a focus on holistic development, we offer a range of educational resources, 
+                activities, and support tailored to foster creativity, critical thinking, and social skills.At DiscoveryDen, 
+                we believe in nurturing young minds through a vibrant community of learning, 
+                exploration, and growth. Our platform is designed for parents and guardians who want the best 
+                for their children. With a focus on holistic development, we offer a range of educational resources, 
+                activities, and support tailored to foster creativity, critical thinking, and social skills.At DiscoveryDen, 
+                we believe in nurturing young minds through a vibrant community of learning, 
+                exploration, and growth. Our platform is designed for parents and guardians who want the best 
+                for their children. With a focus on holistic development, we offer a range of educational resources, 
+                activities, and support tailored to foster creativity, critical thinking, and social skills.
+            </p>
+        </div>
+        </div>
+        <h2   style="font-family:'Tangerine';text-decoration: underline; text-align: center;font-size:50px; color: whitesmoke; font-size: 30px; ">Features We Offer</h2>   
+        <div class="features-container">
+            <div  id="virtual_paint" class="feature-box">
+                <h2>Virtual Paint</h2>
+                <img src="/virtual.jpg" alt="Virtual Paint Icon" class="icon">
+            </div>
+            <div class="feature-box">
+                <h2>Books</h2>
+                <a href="books.html">
+                <img src="/book.jpeg" alt="Virtual Paint Icon" class="icon">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+
+

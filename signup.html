@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signstyle.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <h2>SignUp</h2>
+        <form action="/signup" method="POST">
+            <div class="form-control">
+                <input name="child_name" placeholder="Name of Child" type="text" required>
+            </div>
+            <div class="form-control">
+                <input name="parent_name" type="text" required placeholder="Name of Parent/Guardian">
+            </div>
+            <div class="form-control">
+                <input name="date_of_birth" type="date" placeholder="Select DateOfBirth" required>
+            </div>
+            <div class="form-control">
+                <input name="contact_info" placeholder="Email_id/PhoneNo." type="text" required>
+            </div>
+            <div class="form-control">
+                <input name="password" type="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <small>
+            Already have an account
+            <a href="index.html">Login here..</a> 
+        </small>
+    </div>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
